@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영어 9월 1일 2반 과제</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>영어 9월 1일 2반 과제</h1>
+        <div id="password-form" class="password-form">
+            <input type="password" id="password" placeholder="비밀번호를 입력하세요">
+            <button onclick="checkPassword()">확인</button>
+        </div>
+        <div id="post-content" class="post-content" style="display: none;">
+            <h2>과제 내용</h2>
+            <p>과제 꼭 해와라</p>
+            <a href="https://drive.google.com/file/d/1A2B3C4D5E6F7G8H9I0J/view?usp=sharing" class="drive-link" target="_blank">과제 다운로드</a>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            if (password === '1234') {
+                document.getElementById('password-form').style.display = 'none';
+                document.getElementById('post-content').style.display = 'block';
+            } else {
+                alert('비밀번호가 틀렸습니다.');
+            }
+        }
+    </script>
+</body>
+</html>
